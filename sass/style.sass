@@ -1,0 +1,59 @@
+@import 'base/_variables'
+
+* 
+    font-family: "MuseoModerno", sans-serif
+.container
+    position: relative
+    max-width: 950px
+    margin: 0 auto
+
+@import 'blocks/_promo'
+@import 'blocks/_header'
+@import 'blocks/_button'
+@import 'blocks/_benefits'
+@import 'blocks/_consultation'
+@import 'blocks/_forms'
+@import 'blocks/_carousel'
+@import 'base/_media'
+
+#myBtn
+    display: none
+    position: fixed
+    bottom: 20px
+    right: 30px
+    z-index: 99
+    border: none
+    outline: none
+    background-color: red
+    color: white
+    cursor: pointer
+    padding: 15px
+    border-radius: 10px
+    font-size: 18px
+    transition: .4s all
+
+#myBtn:hover
+    background-color: #555
+
+.cards-container
+       display: flex
+       flex-wrap: wrap
+       justify-content: center
+       /*align-items: center*/
+
+.card
+    background-color: rgba(240, 240, 240, 0.9)
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 30%
+    min-width: 318px
+    margin-top: 50px
+    margin-bottom: 50px
+    margin-left: 10px
+    flex-wrap: wrap
+    justify-content: center
+    border-radius: 0% 10%
+
+.card-title
+    display: block
