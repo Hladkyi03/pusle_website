@@ -15,7 +15,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// получаем массив данных
+/* // получаем массив данных
 const data = [
     { title: "Карточка 1", text: "Это содержимое карточки 1", imageUrl: "../img/photo_1.png" },
     { title: "Карточка 2", text: "Это содержимое карточки 2", imageUrl: "../img/photo_2.png" },
@@ -58,7 +58,7 @@ const data = [
       // добавляем карточку в контейнер на странице
       container.appendChild(card);
     });
-  });
+  }); */
 
   const slider = tns({
     container: '.my-slider',
@@ -87,3 +87,29 @@ const data = [
   document.querySelector('.next').addEventListener('click', function () {
     slider.goTo('next');
   });
+
+
+(function($) {
+function toggleSlide(item){
+    $(item).each(function(i) {
+      $(this).on('click', function(e) {
+          e.preventDefault();
+          $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+          $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+      })
+    });
+  };
+
+   
+  $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab-active)', function() {
+    $(this)
+      .addClass('catalog__tab-active').siblings().removeClass('catalog__tab-active')
+      .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+  });
+      
+
+  toggleSlide('.catalog-item__link');
+  toggleSlide('.catalog-item__link-back');
+
+})(jQuery);
+

@@ -19,6 +19,26 @@
             width: 100%
         .next, .prev
             display: none
+    .catalog
+        &__content
+            justify-content: center
+    .reviews
+        .container
+                padding: 0px 70px 43px 70px
+        &__wrapper
+            gap: 20px
+        &__avatar
+            min-width: 140px
+            img
+                width: 100%
+    .footer
+        &__block
+            width: 360px
+            height: 250px
+        &__addr
+            font-size: 18px
+        &__tel
+            font-size: 19px
 @media (max-width: 767px)
     .promo
         min-height: 400px
@@ -66,6 +86,39 @@
             button
                 width: 18px
                 height: 18px
+    .catalog
+        &__tab
+            width: 160px
+            font-size: 16px
+            &:hover
+                box-shadow: none
+        &-item
+            width: 260px
+            &__price-sale
+                font-size: 16px
+    .reviews
+        .container
+                padding: 0px 20px 43px 20px
+        &__nickname
+            font-size: 16px
+        &__subheader
+            font-size: 12px
+        &__feedback
+            font-size: 14px
+            p
+                margin-top: 12px
+                margin-bottom: 0
+    .footer
+        &__block
+            width: 300px
+            height: 220px
+        &__addr
+            font-size: 16px
+            margin-bottom: 20px
+        &__tel
+            font-size: 17px
+        &__social
+            margin-top: 20px
 @media (max-width: 576px)
     .promo
         &__wrapper
@@ -125,3 +178,19 @@
             button
                 width: 16px
                 height: 16px
+    .catalog
+        &__tabs
+            flex-direction: column
+    .reviews
+        &__wrapper
+            margin-top: 40px
+            flex-direction: column
+            align-items: center
+        &__nickname
+            text-align: center
+        &__subheader
+            text-align: center
+    .footer
+        &__block
+            height: 190px
+            padding: 30px 0

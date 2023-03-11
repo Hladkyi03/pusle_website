@@ -14,26 +14,32 @@
 @import 'blocks/_consultation'
 @import 'blocks/_forms'
 @import 'blocks/_carousel'
+@import 'blocks/_catalog'
+@import 'blocks/_reviews'
+@import 'blocks/_footer'
 @import 'base/_media'
 
 #myBtn
+    width: 50px
+    height: 50px
+    padding: 0
     display: none
     position: fixed
     bottom: 20px
     right: 30px
+    background: url('../icons/image.png') center center/cover no-repeat
     z-index: 99
     border: none
     outline: none
-    background-color: red
-    color: white
     cursor: pointer
-    padding: 15px
-    border-radius: 10px
     font-size: 18px
     transition: .4s all
-
-#myBtn:hover
-    background-color: #555
+    border-radius: 100%
+    img
+        display: block
+        width: 100%
+    &:hover
+        box-shadow: 3px 3px 20px $main-color
 
 .cards-container
        display: flex
